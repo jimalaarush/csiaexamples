@@ -1,0 +1,30 @@
+
+  $(document).ready(function() {
+    $('#accordion h3').next().hide(); // start off with all parts closed
+    $('#accordion h3').addClass('link') 
+  
+   // navigation - open navigated part when header clicked, only in the case for 'accordion' nav
+    $('#accordion h3').click(function() {
+        $('#accordion h3').next().hide(); // start off with all parts closed
+		$(this).next().toggle('fast');
+		$(this).toggleClass('selected');
+		return false;
+	});
+	
+	$('li:not(:has(p))').addClass('liWithoutP');
+	
+   // when page is opened, adjust the navigation to current location 
+   var path, container, part, chapter, findpath, container_path;
+   path = (location.href.split("tsm.xql"))[1];
+   $('#tabs ul li a').removeClass();
+
+    part = path.split("&")[1];
+   chapter = path.split("&")[2];
+   findpath = "[href$=" + part + "&" + chapter + "]"
+   $('#flat h3').next().find(findpath).addClass('navSelected')  // only this applies for flat navigation
+   
+   // whereas below applies for 'accordion' nav
+   $('#accordion h3').next().hide(); // start off with all parts closed
+   $('#accordion h3').next().find(findpath).addClass('navSelected')
+   $('#accordion h3').next().find(findpath).closest('div').show();
+  });

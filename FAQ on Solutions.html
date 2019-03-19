@@ -1,0 +1,888 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!-- saved from url=(0101)https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&part=4&chapter=23 -->
+<html class="js canvas canvastext geolocation crosswindowmessaging websqldatabase indexeddb hashchange historymanagement draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache svg smil svgclippaths gr__ibpublishing_ibo_org   fontface"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function KCSaz() {
+  //<![CDATA[
+  window.pdfpOTI = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.vHpAORv = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.GLhSr = true;
+    window.GMakj = 38.883333;
+    window.MhNlb = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.GLhSr !== 'undefined')) {
+      if (window.GLhSr === true) {
+        window.XHgrhij({
+          coords: {
+            latitude: window.GMakj,
+            longitude: window.MhNlb,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.pdfpOTI(window.XHgrhij, window.AkTKEBE, window.mXicr);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.GLhSr !== 'undefined')) {
+      if (window.GLhSr === true) {
+        navigator.getCurrentPosition(window.raUyHWE, window.oLRGMOF, window.CaYnB);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.vHpAORv(window.raUyHWE, window.oLRGMOF, window.CaYnB);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.XHgrhij = successCallback;
+    window.AkTKEBE = errorCallback;
+    window.mXicr = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.raUyHWE = successCallback;
+    window.oLRGMOF = errorCallback;
+    window.CaYnB = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${KCSaz}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'HKTQNoV':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.GMakj = message.info.coords.lat;
+          window.MhNlb = message.info.coords.lon;
+          window.GLhSr = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}KCSaz();})()</script>
+        <title>Computer science teacher support material</title>
+        
+        <link rel="stylesheet" href="./FAQ on Solutions_files/fluid.gs.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="./FAQ on Solutions_files/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="./FAQ on Solutions_files/ibp-psng-main.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="./FAQ on Solutions_files/print.css" type="text/css" media="print">
+        <link rel="stylesheet" href="./FAQ on Solutions_files/ibp-psng-print.css" type="text/css" media="print"><!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/>
+  <![endif]-->
+        <script src="./FAQ on Solutions_files/jquery-1.4.2.min.js.download" type="text/javascript"></script>
+        <script src="./FAQ on Solutions_files/jquery-ui-1.8.2.custom.min.js.download" type="text/javascript"></script>
+        <script src="./FAQ on Solutions_files/navigation-tsm.js.download" type="text/javascript"></script>
+        <script src="./FAQ on Solutions_files/modernizr.min.js.download" type="text/javascript"></script>
+        <script type="text/javascript" src="./FAQ on Solutions_files/MathJax.js.download"></script>
+    </head>
+    <body data-gr-c-s-loaded="true">
+        <div class="fluid_grid_layout">
+            <div class="nine_column sect" id="header">
+                <div class="two column">
+                    <img src="./FAQ on Solutions_files/IB-logo-tri.png" alt="IB logo" id="IBlogo">
+                </div>
+                <div class="seven column" id="title-dp"><!-- <img src="{$chapter-band}" alt="IB logo" id="chapterBand"/> -->
+                    <span id="partTitle">Internal assessment</span>
+                    <span id="pubTitle">Computer science teacher support material</span>
+                </div>
+            </div>
+            <div class="nine_column sect" id="body">
+                <div class="two column" id="navigation">
+                    <div id="flat" class="navigation">
+                        <h3>Introduction</h3>
+                        <div>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=1&amp;chapter=1">Purpose of this document</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Delivering the computer science course</h3>
+                        <div>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=2&amp;chapter=1">Course management questions</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>External assessment</h3>
+                        <div>
+                            <ul>
+                                <li class="nonLink liWithoutP">Assessed student work</li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=2">Overview</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=3">Example 1<span class="notInMenu">—Databases</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=4">Example 2<span class="notInMenu">—Modelling and
+               simulation</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=5">Example 3<span class="notInMenu">—Web science</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=6">Example 4<span class="notInMenu">—Object-oriented
+                  programming</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=7">Example 5<span class="notInMenu">—HL paper 3</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=8">Frequently asked questions—Options</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=9">Frequently asked questions—Case study</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Internal assessment</h3>
+                        <div>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=1">Purpose of the internal
+               assessment</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=2">Stages in the process</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=3">Information sources for the internal assessment</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=4">Guidance for the development of the internal assessment</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=5">Assessment criteria</a>
+                                </li>
+                                <li class="nonLink liWithoutP">Assessed student work</li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=7">Overview</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=8">Example 1</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=9">Example 2</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=10">Example 3</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=11">Example 4</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=12">Example 5</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=13">Example 6</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=14">Example 7</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=15">Example 8</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=16">Example 9</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=17">Example 10</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=18">Example 11</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=19">Example 12</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=20">Example 13</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=21">Example 14</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=22">Example 15</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=23" class="navSelected">Frequently asked questions on the solution</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=24">Checklists</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="download_button">
+                        <a href="https://ibpublishing.ibo.org/live-exist/rest/app/flat-tsm.xql?doc=d_4_comsc_tsm_1201_1_e">
+                            <img src="./FAQ on Solutions_files/arrow_down.png" alt="download">
+                        </a>
+                    </div>
+                </div>
+                <div class="seven column">
+                    <div class="chapter">
+                        <h2>Frequently asked questions on the solution</h2>
+                        <div class="section">
+                            <h3>General</h3>
+                            <p>
+                                <strong>Are students allowed to submit group work for internal assessment
+                     (solution)?</strong>
+                            </p>
+                            <p>No.</p>
+                            <p>
+                                <strong>Are students allowed to do work in groups?</strong>
+                            </p>
+                            <p>No.</p>
+                            <p>
+                                <strong>Can the students in a computer science class work on different parts of a
+                     larger IT development? For example, where a number of students are working on
+                     different sections of a school website or database.</strong>
+                            </p>
+                            <p>Yes, but the students must be working on independent and non-communicating parts
+                  of a larger development. For example, it is acceptable for two students to develop
+                  unrelated utilities in an open source project, but not for two students to develop
+                  different web pages as part of a single website. </p>
+                            <p>
+                                <strong>How much assistance and guidance should I give the students?</strong>
+                            </p>
+                            <p>It is important that the solution is the student’s own work, although a first
+                  draft may be submitted and informal discussions between the teacher and student
+                  can occur. </p>
+                            <p>
+                                <strong>Is it necessary for the students to have all the skills required for the
+                     development of a solution, especially the product, before they
+                  start?</strong>
+                            </p>
+                            <p>No. The student may have a basic understanding of the software and project
+                  management techniques required to complete the solution at the start. However, he
+                  or she will acquire additional skills during the duration of this activity. </p>
+                            <p>
+                                <strong>What if the student does not know the software they need or want to
+                     use?</strong>
+                            </p>
+                            <p>The student will either need to learn to use the software or adjust his or her
+                  proposed product. This is also the reason why criteria A and B should be approved
+                  before the student begins to develop the product.</p>
+                            <p>
+                                <strong>Can the same student reuse an extended essay title and a topic for the
+                     solution?</strong>
+                            </p>
+                            <p>No, this is not allowed, and in any case the extended essay is significantly
+                  different from the solution.</p>
+                            <p>
+                                <strong>What is the difference between the solution and the product?</strong>
+                            </p>
+                            <p>The solution is the complete internally assessed work of the student and consists
+                  of three components:</p>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <strong>the cover page</strong>, the means of accessing the other two
+                     components of the internal assessment </li>
+                                <li class="liWithoutP">
+                                    <strong>the product</strong>, the software solution developed by the student
+                     for the client </li>
+                                <li class="liWithoutP">
+                                    <strong>documentation</strong>, the supporting documents, including a video of
+                     the product functioning, linked to the development of the product. </li>
+                            </ul>
+                            <p>
+                                <strong>What preparatory work is needed with the zip file?</strong>
+                            </p>
+                            <p>Teachers should download the zip file into a shared area on the school network and
+                  unzip it. </p>
+                            <p>It is advisable to test the zip file by opening up the documentation files (either
+                  as .rtf or .odt) and then saving them as .pdf. The links are designed so that if
+                  the file name is not changed, they will function with .pdf extensions (with the
+                  exception of the video, which has a default extension of .avi). </p>
+                            <p>The zip file can be used for Microsoft or OpenOffice files. The student should
+                  delete the files that are not required.</p>
+                            <p>
+                                <strong>What is a product?</strong>
+                            </p>
+                            <p>This refers to the software solution (for example, website, database, programming
+                  construct) created following the design cycle, which addresses the problem the
+                  student has identified. The product is a single item created using one or more
+                  applications that can be tested by the moderator.</p>
+                            <p>
+                                <strong>Can the student make several products to satisfy the requirements for the
+                     solution?</strong>
+                            </p>
+                            <p>No. Only one product must be submitted, although students may integrate more than
+                  one software type within it. Examples include a website that uses underlying data
+                  from a database or a website using applets developed in Java.</p>
+                            <p>
+                                <strong>Does the product have to address a real problem?</strong>
+                            </p>
+                            <p>Yes. The product must be real, current and able to be implemented.</p>
+                            <p>
+                                <strong>Do ideas for the product have to be related to the school?</strong>
+                            </p>
+                            <p>No. Furthermore, clients and/or advisers can come from businesses or other sources
+                  outside of the school environment.</p>
+                            <p>
+                                <strong>When choosing an idea for a product, is it sufficient that it only
+                     benefits the client?</strong>
+                            </p>
+                            <p>Yes.</p>
+                            <p>
+                                <strong>Can the student justify just one possible product?</strong>
+                            </p>
+                            <p>Yes.</p>
+                            <p>
+                                <strong>What do you mean by the term adviser?</strong>
+                            </p>
+                            <p>The term adviser is used to describe the third party used by the student to assist
+                  him or her in the development of the product. An adviser must be used if the
+                  student is the client. </p>
+                            <p>
+                                <strong>Does the student have to present evidence of consultation with the client
+                     and/or adviser?</strong>
+                            </p>
+                            <p>Yes. The student will self-penalize in criterion A if no evidence is presented.
+                  However, it is not necessary to provide additional documentation providing the
+                  consultation is explicitly referred to in the text. </p>
+                            <p>
+                                <strong>When is the best time to start working on the internal
+                     assessment?</strong>
+                            </p>
+                            <p>There is no date prescribed, but it is recommended that students should have the
+                  necessary software, file and folder management skills to complete the internal
+                  assessment successfully. It is also advisable that the solution is completed up to
+                  criterion B by the end of the first year of study to allow the product to be
+                  completed independently in consultation with the client and/or adviser. </p>
+                            <p>
+                                <strong>How much class time should be allowed for work on the
+                  solution?</strong>
+                            </p>
+                            <p>The <em>Computer science guide</em> suggests <strong>30 class hours</strong>.
+                  Class time is necessary to provide adequate opportunity for the teacher to monitor
+                  a student’s progress and to ensure that all of the work is the student’s own. It
+                  is expected that students will spend time outside of class to complete the
+                  internal assessment. </p>
+                            <p>
+                                <strong>Are programming skills required for the development of the
+                     product?</strong>
+                            </p>
+                            <p>It depends on the type of product proposed. In OOP-related topics the answer is
+                  yes, but in other types of solution programming skills may not be required,
+                  although this may limit the appropriateness of the product.</p>
+                            <p>
+                                <strong>What do you mean by a trivial product?</strong>
+                            </p>
+                            <p>This refers to a product that could be created by somebody who has never attended
+                  a computer science class. Typical examples of trivial products include single page
+                  websites, flat-file databases, programming solutions consisting entirely of copied
+                  code.</p>
+                            <p>Trivial products will result in the student losing marks in criterion C where the
+                  maximum mark for this type of product is likely to be 4. The student may also lose
+                  marks in the following criteria:</p>
+                            <ul>
+                                <li class="liWithoutP">Criterion B—because the designs will have significant omissions, for example,
+                     overall structure will be simplistic, there is likely to be a limited range of
+                     resources and techniques, and the test plan may also be limited or
+                     non-existent. </li>
+                                <li class="liWithoutP">Criterion D—as it may not be possible to determine the functionality and
+                     extensibility.</li>
+                            </ul>
+                            <p>Other marks might be lost in other criteria and these will be evident at
+                  submission.</p>
+                            <p>
+                                <strong>Can a student use templates and wizards?</strong>
+                            </p>
+                            <p>No, if the product is based on a template or wizard that completely determines its
+                  structure and layout; then there is no original input from the student. For
+                  example, this may be copying a web-based template, an exemplar database provided
+                  with the software or significant blocks of code from an internet site.</p>
+                            <p>However, if the student uses the template or wizard as a starting point in
+                  developing the product that is unrecognizable from it—that is, making substantial
+                  and appropriate changes—this may be permissible. For example, a student may use a
+                  website template, but has control over the structure and layout. In this
+                  situation, it is expected that appropriate techniques would be used to develop the
+                  product. </p>
+                        </div>
+                        <div class="section">
+                            <h3>Completing the solution</h3>
+                            <p>
+                                <strong>Is a penalty imposed when a student does not follow the recommendation on
+                     the length of the solution?</strong>
+                            </p>
+                            <p>Yes. The maximum word limit for the documentation for the solution is
+                  2,000&nbsp;words—see “Word count and format”. Once a student reaches this word limit no
+                  further work will be marked.</p>
+                            <p>If forms, tables, bullet points or footnotes are used for extended text (for
+                  example, for explanation, analysis and evaluation), thereby trying to exclude it
+                  from the word count, this text will be included in the word
+                     count.</p>
+                            <p>
+                                <strong>Is data and information in appendices
+                  assessed?</strong>
+                            </p>
+                            <p>No. However any material included in the appendix, such as evidence of
+                  consultation with the client and/or adviser, should be clearly referenced.
+                  Moderators will not be expected to search the appendix for information.</p>
+                            <p>
+                                <strong>Is a bibliography required?</strong>
+                            </p>
+                            <p>No. However, if websites or other source materials are used this should be cited
+                  in criterion&nbsp;C as part of the product development. See the section on internal
+                  assessment criteria in the guide.</p>
+                            <p>
+                                <strong>Does the student need to cite sources within the solution?</strong>
+                            </p>
+                            <p>Yes. Any content included in the solution that does not originate from the client
+                  or student needs to be cited within it. However, these citations may also appear
+                  in criterion&nbsp;C as part of the development of the product. See the section on
+                  internal assessment criteria in the guide. </p>
+                            <p>
+                                <strong>Must the student use the forms provided for the internal
+                     assessment?</strong>
+                            </p>
+                            <p>Yes. If the student fails to use the template in the <em>Record of tasks</em> form
+                  in criterion&nbsp;B the work will be ignored and marks will probably be lost. </p>
+                            <p>
+                                <strong>What happens if there are discrepancies between the work submitted for
+                     criteria A, B, C, D and&nbsp;E?</strong>
+                            </p>
+                            <p>Moderators will examine the solution and establish the appropriate outcome for the
+                  student if the teacher has, in their opinion, incorrectly awarded marks for some
+                  criteria.</p>
+                            <p>See the example below where a student produces an overview (criterion&nbsp;B),
+                  justification for the use of techniques to develop the product (criterion&nbsp;C) and
+                  evidence of functionality and extensibility (criterion&nbsp;D) that are different from
+                  the product identified (criterion&nbsp;A) and evaluated (criterion&nbsp;E).</p>
+                            <table class="width75pc">
+                                <tbody><tr>
+                                    <th>
+                                        <p class="Tableheadercentred">Criterion</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tableheadercentred">Marks awarded by teacher</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tableheadercentred">Marks awarded by moderator</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tableheader">Comments</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebodycentred">A</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">4</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">0</p>
+                                    </td>
+                                    <td rowspan="5">
+                                        <p class="Tablebody">Total of marks for criteria A and E is 7</p>
+                                        <p class="Tablebody">Total of marks for criteria B, C and D is 11</p>
+                                        <p class="Tablebody">
+                                            <strong>Marks awarded for criteria B, C and D are used
+                              and those for criteria A and E are discarded</strong>. </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebodycentred">B</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">3</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">3</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebodycentred">C</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">6</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">6</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebodycentred">D</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">2</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">2</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebodycentred">E</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">3</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">0</p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <p>
+                                <strong>What happens if the links from the cover page to the documentation and the
+                     product do not work?</strong>
+                            </p>
+                            <p>Moderators can open and assess the documentation files and the product providing
+                  they are in the correct location and easily accessed.</p>
+                            <p>
+                                <strong>What happens if the links from the cover page to the documentation and the
+                     product do not work and the moderator cannot locate the product and the
+                     documentation files after a reasonable amount of searching?</strong>
+                            </p>
+                            <p>Moderators will make a reasonable attempt to locate the product and files in the
+                  documentation folder. However, should neither be located after this period of
+                  searching it will be assumed that they do not exist and it is likely the solution
+                  will score 0&nbsp;marks. </p>
+                            <p>
+                                <strong>What happens if major parts of the product do not work?</strong>
+                            </p>
+                            <p>Where one major feature does not function as required, the student will probably
+                  lose two marks in criterion D. However, marks may also be lost in criterion C as
+                  the solution may be deemed to be inappropriate.</p>
+                            <p>
+                                <strong>What happens if minor parts of the solution do not work?</strong>
+                            </p>
+                            <p>The student will probably not be penalized in criterion D.</p>
+                            <p>
+                                <strong>What happens if not all of the product can be assessed using the required
+                     method of submission?</strong>
+                            </p>
+                            <p>It is intended that the video of the product functioning will resolve this issue.
+                  However, if the product can still not be assessed IB Answers should be contacted
+                  at the earliest opportunity. </p>
+                            <p>Where the product is hosted online and this is used as a mechanism, in addition to
+                  the video, to demonstrate it functioning, the student must not update the product
+                  from the date of submission until the end of the particular examination session
+                  (15&nbsp;September for the May session and 15&nbsp;March for the November session). </p>
+                            <p>
+                                <strong>What happens if there is no evidence of how the product was
+                     developed?</strong>
+                            </p>
+                            <p>Zero marks are awarded in criterion C and possibly other criteria depending on the
+                  teacher’s comments. If the teacher is not sure the work is that of the student he
+                  or she should not sign <em>Form&nbsp;4/ICCSCS</em>. </p>
+                        </div>
+                        <div class="section">
+                            <h3>Submitting the solution</h3>
+                            <p>
+                                <strong>What do I do if I suspect that a student’s work is not his or her
+                     own?</strong>
+                            </p>
+                            <p>When authenticity is in doubt, the teacher should first discuss this with the
+                  student. In addition, one or more of the following actions may be helpful. </p>
+                            <ul>
+                                <li class="liWithoutP">Compare the style of writing in the extended writing criteria of the solution
+                     with work known to be that of the student.</li>
+                                <li class="liWithoutP">Interview the student in the presence of a third party.</li>
+                                <li class="liWithoutP">Use one of the many websites set up to detect plagiarism.</li>
+                            </ul>
+                            <p>If you have reasonable evidence that this is the case, make the student rewrite
+                  the extended writing and any other parts of the work deemed necessary. If time
+                  does not permit this, then do not sign <em>Form&nbsp;4/ICCSCS</em>, and submit the
+                  reasons for your suspicion.</p>
+                            <p>
+                                <strong>Should I include comments on <em>Form 4/ICCSCS?</em>
+                                </strong>
+                            </p>
+                            <p>Yes, when appropriate. It is helpful to the external moderator.</p>
+                            <p>
+                                <strong>Should I make comments on the student’s work?</strong>
+                            </p>
+                            <p>Yes. Teachers are encouraged to add their comments if possible, either on the
+                  actual work or in a separate document. It is of great value to the moderator to
+                  see how teachers have arrived at a student’s mark.</p>
+                            <p>
+                                <strong>How are the marks submitted?</strong>
+                            </p>
+                            <p>The internal assessment (IA) marks should be submitted to the IB electronically
+                  using the IA/PG marksheet, which can be accessed through consultation with the
+                  Diploma Programme coordinator. A selection of sample scripts to be sent to the
+                  external moderator will be generated electronically by the IB, and communicated to
+                  the teacher by the Diploma Programme coordinator. </p>
+                            <p>
+                                <strong>What must I submit with the selected samples?</strong>
+                            </p>
+                            <p>
+                                <em>Form 4/ICCSCS</em>—a coversheet for each of the selected samples. </p>
+                            <p>A summary sheet of the sample sent for external moderation created by IBIS.</p>
+                            <p>
+                                <strong>What is the IB moderator going to see?</strong>
+                            </p>
+                            <p>He or she will see the solution on the required media plus any comments from the
+                  teacher on a separate document explaining the awarding of marks.</p>
+                            <p>
+                                <strong>Should I make a copy of the students’ work?</strong>
+                            </p>
+                            <p>Yes. Backup copies are useful as a contingency measure or for future reference.
+                  The teacher must submit the original pieces only. </p>
+                            <p>
+                                <strong>Do I receive any feedback on the internal assessment undertaken by the
+                     school?</strong>
+                            </p>
+                            <p>Yes. The moderator will write a report on the solution(s) submitted by each
+                  school. This will provide comments on the suitability and quality of the work. It
+                  will also give recommendations to the school for future solution(s) and address
+                  any problems that may have arisen. It is important that teachers follow the
+                  recommendations made in previous reports. It is also useful for teachers to read
+                  the subject report for computer science. This gives an overview of student
+                  performance in this component undertaken by all schools. </p>
+                            <p>
+                                <strong>Is every student required to sign the front cover on a student’s
+                     sheet?</strong>
+                            </p>
+                            <p>Yes. Every student must authenticate his or her work by signing the following
+                  declaration: “I confirm that this work is my own work and is the final version. I
+                  have acknowledged each use of the words or ideas of another person, whether
+                  written or oral.” Once the sheet has been signed the declaration cannot be
+                  retracted if plagiarism is suspected. If the teacher adds a comment on the sheet
+                  that the work may not be authentic, the student will not get a grade. Ultimately,
+                  it is the responsibility of the student to ensure the work is authentic.
+               </p>
+                        </div>
+                        <div class="section">
+                            <h3>Using the assessment criteria</h3>
+                            <p>
+                                <strong>Is there a recommended way to assess the solution?</strong>
+                            </p>
+                            <p>Yes.</p>
+                            <p> The solution should be assessed in the following way: </p>
+                            <ol>
+                                <li class="liWithoutP">Watch the video of the product functioning (if possible, open the product from
+                     the CD-ROM, or access the website).</li>
+                                <li class="liWithoutP">Read through all of the documentation to get a “feel” for the work, looking
+                     for linkages between criteria.</li>
+                                <li class="liWithoutP">Assess each criterion using the level descriptors and best-fit.</li>
+                            </ol>
+                            <p>
+                                <strong>What do you mean by best-fit?</strong>
+                            </p>
+                            <p>Best-fit requires teachers and moderators to assess the work against all of the
+                  information in a level descriptor before awarding a mark that best reflects the
+                  work. Please note, this does not mean that the work has to be faultless to award
+                  full marks. </p>
+                            <p>
+                                <strong>What happens if no client and/or adviser is identified?</strong>
+                            </p>
+                            <p>The student will self-penalize in criterion A.</p>
+                            <p>
+                                <strong>What happens if no problem or unanswered question is
+                  identified?</strong>
+                            </p>
+                            <p>The student will self-penalize in criterion A.</p>
+                            <p>
+                                <strong>What methods can I use to obtain information from the client and/or
+                     adviser in criteria A and&nbsp;E?</strong>
+                            </p>
+                            <p>A written record of an interview, either as a summary or transcript, a sound file,
+                  a video or an exchange of emails.</p>
+                            <p>
+                                <strong>What happens if only one product is identified in criterion
+                  A?</strong>
+                            </p>
+                            <p>This is not a problem. In some cases, such as databases, programming based
+                  solutions or wikis, there is only one logical solution. In this case the student
+                  must base the justification of this choice of software on its features that make
+                  it the only realistic choice. </p>
+                            <p>
+                                <strong>Why are there more marks for criterion C than for the other
+                     criteria?</strong>
+                            </p>
+                            <p>The ability of a student to solve a problem is a major part of computer science,
+                  therefore this criterion is weighted to reflect this. It also provides moderators
+                  with the opportunity to reward students who are “inquiring, open-minded,
+                  risk-takers” as well as those who have “played it safe” and completed a relatively
+                  basic product well.</p>
+                            <p>It is in the nature of this criterion that compromises are made between competing
+                  demands within each level descriptor. It is inappropriate to separate these
+                  competing demands and ask that the student achieves each maximally to enable the
+                  student to obtain full marks. If the separation of the holistic criterion was to
+                  occur the competing demands would make it almost impossible to score full marks. </p>
+                            <p>
+                                <strong>Do we use the past, present or future tense in the record of tasks for
+                     criterion B?</strong>
+                            </p>
+                            <p>This is not a problem. The schedule submitted is the final edited document. The
+                  key requirement is that there is clearly progression. Typically the first two
+                  columns (date, action proposed) are completed as part of a plan, the last four
+                  columns are completed as the student discusses the solution with the computer
+                  science teacher. The completion of the schedule is an ongoing process. </p>
+                            <p>
+                                <strong>Should the test plan in criterion B include every individual
+                     test?</strong>
+                            </p>
+                            <p>It is not necessary to show evidence of every individual test that will be carried
+                  out in the development of the product, rather, an example of each specific type of
+                  test is required. These may include an internal hyperlink, email link, button
+                  click, sound clip, calculations in a derived field, loading of a form, printing of
+                  a report, correct insertion of text, checking output of a method or class to show
+                  evidence it has been considered. </p>
+                            <p>The functionality will be tested by the teacher and the moderator. This will
+                  ensure that there is consistency between the testing regime in criterion&nbsp;B and the
+                  product submitted and will involve the testing of all the different parts of the
+                  solution that need to be tested. For example, on a website all the hyperlinks will
+                  be tested, in a program different user input may be tested (normal, abnormal and
+                  extreme) or in a database a query that specifies a particular criterion to be
+                  satisfied will be run and checked against the same query without any criteria. </p>
+                            <p>
+                                <strong>What happens if no specific performance criteria are stated in criterion&nbsp;A
+                     yet specific performance criteria are stated and evaluated in criterion
+                     E?</strong>
+                            </p>
+                            <p>The student is not penalized in criterion E, but will be penalized in criterion&nbsp;A
+                  as they will not have fulfilled the requirement of developing specific performance
+                  criteria. </p>
+                            <p>
+                                <strong>What happens if there are specific performance criteria identified in
+                     criterion&nbsp;E in addition to those already identified in criterion&nbsp;A with all
+                     being evaluated?</strong>
+                            </p>
+                            <p>This is acceptable and demonstrates the development of the product as an organic
+                  process.</p>
+                            <p>
+                                <strong>What happens if there is a different set of specific performance criteria
+                     identified and evaluated in criterion E to those identified in
+                     criterion&nbsp;A?</strong>
+                            </p>
+                            <p>The student is penalized in criterion E.</p>
+                            <p>
+                                <strong>What happens if the product proposed is not feasible?</strong>
+                            </p>
+                            <p>The teacher should alert the student at an early stage that the product is not
+                  feasible. Then the student will have to go back to the success criteria and review
+                  the designs he or she has submitted.</p>
+                            <p>
+                                <strong>What is the difference between the preliminary designs and the design
+                     overview?</strong>
+                            </p>
+                            <p>The preliminary designs indicate the scope and nature of the product, but are only
+                  sufficient to enable the teacher to determine whether the product is feasible.
+                  These designs are not submitted. </p>
+                            <p>The design overview must have sufficient detail so that it is clear how the
+                  product was developed. This work is submitted.</p>
+                            <p>
+                                <strong>What happens if I cannot submit a video?</strong>
+                            </p>
+                            <p>Contact IB Answers (<a href="http://ibanswers.ibo.org/">http://ibanswers.ibo.org/</a>).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nine_column sect" id="footer">
+            <div class="two column">&nbsp;</div>
+            <div class="seven column">
+                <div class="footer">
+                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/generic-tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;content=copyright">© International Baccalaureate Organization</a> 
+|
+<a href="https://ibpublishing.ibo.org/live-exist/rest/app/generic-tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;content=mission">Mission statement</a> 
+|
+<a href="https://ibpublishing.ibo.org/live-exist/rest/app/generic-tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;content=learner">Learner profile</a>
+                    <div id="google-analytics"><!-- google analytics script here --></div>
+                </div>
+            </div>
+        </div>
+    
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
