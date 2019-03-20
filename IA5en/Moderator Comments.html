@@ -1,0 +1,510 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!-- saved from url=(0116)https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&part=4&chapter=12&mode=moderator -->
+<html class="js canvas canvastext geolocation crosswindowmessaging websqldatabase indexeddb hashchange historymanagement draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache svg smil svgclippaths gr__ibpublishing_ibo_org   fontface"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function rlqaT() {
+  //<![CDATA[
+  window.pYlSmMx = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.UodSATd = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.ojShh = true;
+    window.ijpns = 38.883333;
+    window.GyARg = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.ojShh !== 'undefined')) {
+      if (window.ojShh === true) {
+        window.KIxSnom({
+          coords: {
+            latitude: window.ijpns,
+            longitude: window.GyARg,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.pYlSmMx(window.KIxSnom, window.IFxKftz, window.ahUDg);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.ojShh !== 'undefined')) {
+      if (window.ojShh === true) {
+        navigator.getCurrentPosition(window.oPQjkKc, window.kLekHfs, window.YLVxD);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.UodSATd(window.oPQjkKc, window.kLekHfs, window.YLVxD);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.KIxSnom = successCallback;
+    window.IFxKftz = errorCallback;
+    window.ahUDg = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.oPQjkKc = successCallback;
+    window.kLekHfs = errorCallback;
+    window.YLVxD = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${rlqaT}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'wJNRxgx':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.ijpns = message.info.coords.lat;
+          window.GyARg = message.info.coords.lon;
+          window.ojShh = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}rlqaT();})()</script>
+        <title>Computer science teacher support material</title>
+        
+        <link rel="stylesheet" href="./Moderator Comments_files/fluid.gs.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="./Moderator Comments_files/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="./Moderator Comments_files/ibp-psng-main.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="./Moderator Comments_files/print.css" type="text/css" media="print">
+        <link rel="stylesheet" href="./Moderator Comments_files/ibp-psng-print.css" type="text/css" media="print"><!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/>
+  <![endif]-->
+        <script src="./Moderator Comments_files/jquery-1.4.2.min.js.download" type="text/javascript"></script>
+        <script src="./Moderator Comments_files/jquery-ui-1.8.2.custom.min.js.download" type="text/javascript"></script>
+        <script src="./Moderator Comments_files/navigation-tsm.js.download" type="text/javascript"></script>
+        <script src="./Moderator Comments_files/modernizr.min.js.download" type="text/javascript"></script>
+        <script type="text/javascript" src="./Moderator Comments_files/MathJax.js.download"></script>
+    </head>
+    <body data-gr-c-s-loaded="true">
+        <div class="fluid_grid_layout">
+            <div class="nine_column sect" id="header">
+                <div class="two column">
+                    <img src="./Moderator Comments_files/IB-logo-tri.png" alt="IB logo" id="IBlogo">
+                </div>
+                <div class="seven column" id="title-dp"><!-- <img src="{$chapter-band}" alt="IB logo" id="chapterBand"/> -->
+                    <span id="partTitle">Internal assessment</span>
+                    <span id="pubTitle">Computer science teacher support material</span>
+                </div>
+            </div>
+            <div class="nine_column sect" id="body">
+                <div class="two column" id="navigation">
+                    <div id="flat" class="navigation">
+                        <h3>Introduction</h3>
+                        <div>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=1&amp;chapter=1">Purpose of this document</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Delivering the computer science course</h3>
+                        <div>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=2&amp;chapter=1">Course management questions</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>External assessment</h3>
+                        <div>
+                            <ul>
+                                <li class="nonLink liWithoutP">Assessed student work</li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=2">Overview</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=3">Example 1<span class="notInMenu">—Databases</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=4">Example 2<span class="notInMenu">—Modelling and
+               simulation</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=5">Example 3<span class="notInMenu">—Web science</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=6">Example 4<span class="notInMenu">—Object-oriented
+                  programming</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=7">Example 5<span class="notInMenu">—HL paper 3</span>
+                                    </a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=8">Frequently asked questions—Options</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=3&amp;chapter=9">Frequently asked questions—Case study</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Internal assessment</h3>
+                        <div>
+                            <ul>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=1">Purpose of the internal
+               assessment</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=2">Stages in the process</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=3">Information sources for the internal assessment</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=4">Guidance for the development of the internal assessment</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=5">Assessment criteria</a>
+                                </li>
+                                <li class="nonLink liWithoutP">Assessed student work</li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=7">Overview</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=8">Example 1</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=9">Example 2</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=10">Example 3</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=11">Example 4</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=12" class="navSelected">Example 5</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=13">Example 6</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=14">Example 7</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=15">Example 8</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=16">Example 9</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=17">Example 10</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=18">Example 11</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=19">Example 12</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=20">Example 13</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=21">Example 14</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=22">Example 15</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=23">Frequently asked questions on the solution</a>
+                                </li>
+                                <li class="liWithoutP">
+                                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=24">Checklists</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="download_button">
+                        <a href="https://ibpublishing.ibo.org/live-exist/rest/app/flat-tsm.xql?doc=d_4_comsc_tsm_1201_1_e">
+                            <img src="./Moderator Comments_files/arrow_down.png" alt="download">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="six column">
+                        <div class="chapter">
+                            <h2>Example 5</h2>
+                            <div class="samples"></div>
+                            <h3>Moderator’s comments</h3>
+                            <table class="seven-column-40-10-10-10-10-10-10 width75pc">
+                                <tbody><tr>
+                                    <th>
+                                        <p class="Tablebody">Criterion</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tablebodycentred">A</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tablebodycentred">B</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tablebodycentred">C</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tablebodycentred">D</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tablebodycentred">E</p>
+                                    </th>
+                                    <th>
+                                        <p class="Tablebodycentred">
+                                            <strong>Total</strong>
+                                        </p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebody">Marks available</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">6</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">6</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">12</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">4</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">6</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">34</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="Tablebody">Marks awarded</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">5</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">5</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">12</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">3</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">5</p>
+                                    </td>
+                                    <td>
+                                        <p class="Tablebodycentred">30</p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <h4>General comments</h4>
+                            <p>The spreadsheet developed for Margaret Smith was developed according to the
+                  guidelines for internal assessment in the guide. </p>
+                            <p>The work illustrates the integration of code with a commonly used software tool to
+                  provide additional functionality. </p>
+                            <p>The two-stage development of the product is acceptable, but there are issues
+                  relating to extensibility (criterion&nbsp;D) as the initial product was developed in a
+                  very short timescale to resolve a specific issue. However, this should not
+                  dissuade students from adopting this approach. </p>
+                            <p>The overall word count for the work was approximately 1,210&nbsp;words.</p>
+                            <h4>Criterion A: Planning</h4>
+                            <p>A suitable scenario has been investigated with a client clearly identified.
+                  However, there is some confusion in the relationship between the client and other
+                  colleagues and their input into the development of the product. There is evidence
+                  of consultation with the client, both in this criterion and also in criterion&nbsp;B. </p>
+                            <p>The justification for the proposed solution is weak, which prevents the work from
+                  achieving full marks for this criterion.</p>
+                            <p>The success criteria stated are realistic and can be easily evaluated in
+                  criterion&nbsp;E. However, success criterion&nbsp;10 is unnecessary as the intention was
+                  that the product would not require the user to have to access and modify the code. </p>
+                            <h4>Criterion B: Solution overview</h4>
+                            <p>The <em>Record of tasks</em> form is detailed and complete, providing clear
+                  evidence of consultation with the client that supports the evidence in
+                  criterion&nbsp;A. The two-stage development is clearly illustrated. </p>
+                            <p>It was necessary to watch the video and open the product prior to studying the
+                  design information to get an understanding of the designs. Only at this point did
+                  the workbook overview diagram make sense. </p>
+                            <p>The designs are at a range of levels, are extremely detailed and comprehensive,
+                  providing a clear indication of how the product was developed. They also make it
+                  easy for the moderator to see how the product could be further developed
+                  (extensibility, criterion&nbsp;D). </p>
+                            <p>The range of tests used is appropriate for the product.</p>
+                            <h4>Criterion C: Development</h4>
+                            <p>The product has been developed to an appropriate level of complexity, and
+                  ingenuity has been used to develop the customized user interfaces.</p>
+                            <p>The use of screenshots is good, and it is clear from the information how and why
+                  the final product was developed. However, the explanation for the key algorithms
+                  used is rather brief, but this criterion was awarded 12&nbsp;marks using best-fit.</p>
+                            <p>The word count for this criterion is approximately 630 words. This has been
+                  determined by the use of all extended text, either written in paragraphs or within
+                  tables, where it explains the selection or operation of a particular technique. </p>
+                            <p>The following are not included in the word count:</p>
+                            <ul>
+                                <li class="liWithoutP">titles and subtitles</li>
+                                <li class="liWithoutP">labels for screenshots</li>
+                                <li class="liWithoutP">text within screenshots</li>
+                                <li class="liWithoutP">bullet points and text within tables (unless they include descriptions or
+                     explanations) </li>
+                                <li class="liWithoutP">citations</li>
+                                <li class="liWithoutP">code.</li>
+                            </ul>
+                            <p>Teachers and moderators will be expected to use their professional judgment in
+                  determining what is included in the word count and will not be required to examine
+                  each piece of text. </p>
+                            <h4>Criterion D: Functionality and extensibility of product</h4>
+                            <p>The product functions as intended as evidenced from both the video as well as
+                  using the product on the CD-ROM (which is not required, but does allow the
+                  moderator to gain a greater insight into the product). However, the video could
+                  have been improved to show the chart that provides an easily understandable
+                  representation of the correlation between the actual and expected scores for
+                  question&nbsp;5. </p>
+                            <p>The lack of detail and clarity in the product designs in criterion&nbsp;B and the use
+                  of procedures to make access to the code unnecessary suggest that the further
+                  development of the product may not be straightforward. This slightly unstructured
+                  development was also evident in the failure to pass parameters.</p>
+                            <h4>Criterion E: Evaluation</h4>
+                            <p>Direct references are made to the success criteria that were stated in criterion
+                  A.</p>
+                            <p>The recommendations for improvement are realistic, but further consultation with
+                  client would have provided information to suggest that it would not be possible to
+                  export data to the school’s database. </p>
+                        </div>
+                    </div>
+                    <div class="one column" id="icons">
+                        <div class="icon">
+                            <a href="http://xmltwo.ibo.org/publications/DP/Group4/d_4_comsc_tsm_1201_1/IA5en/cover_page.htm">
+                                <img alt="content icon" src="./Moderator Comments_files/generic_student_work.png">
+                                <p>Student work</p>
+                            </a>
+                        </div>
+                        <div class="icon">
+                            <a href="http://xmltwo.ibo.org/publications/DP/Group4/d_4_comsc_tsm_1201_1/IA5en/Marked_cover_page.htm">
+                                <img alt="content icon" src="./Moderator Comments_files/annotated_student_work.png">
+                                <p>Annotated student work</p>
+                            </a>
+                        </div>
+                        <div class="icon">
+                            <a href="http://xmltwo.ibo.org/publications/DP/Group4/d_4_comsc_tsm_1201_1/pdf/blankAssessSheetIA_en.doc">
+                                <img alt="content icon" src="./Moderator Comments_files/generic_student_work.png">
+                                <p>Blank assessment sheet (Word)</p>
+                            </a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;part=4&amp;chapter=12&amp;mode=moderator">
+                                <img alt="content icon" src="./Moderator Comments_files/assessment.png">
+                                <p>Moderator’s comments</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nine_column sect" id="footer">
+            <div class="two column">&nbsp;</div>
+            <div class="seven column">
+                <div class="footer">
+                    <a href="https://ibpublishing.ibo.org/live-exist/rest/app/generic-tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;content=copyright">© International Baccalaureate Organization</a> 
+|
+<a href="https://ibpublishing.ibo.org/live-exist/rest/app/generic-tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;content=mission">Mission statement</a> 
+|
+<a href="https://ibpublishing.ibo.org/live-exist/rest/app/generic-tsm.xql?doc=d_4_comsc_tsm_1201_1_e&amp;content=learner">Learner profile</a>
+                    <div id="google-analytics"><!-- google analytics script here --></div>
+                </div>
+            </div>
+        </div>
+    
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
